@@ -10,6 +10,19 @@ const numQuestions = 0;
 const numCorrect = 0;
 
 class App extends Component {
+  state = {
+    value1: value1,
+    value2: value2,
+    value3: value2,
+    propposeAnswer: proposedAnswer,
+    numQuestions:  numQuestions,
+    numCorrect: numCorrect 
+    
+  }
+
+ checkAnswer = () => {
+    
+ }
   render() {
     return (
       <div className="App">
@@ -22,8 +35,8 @@ class App extends Component {
           <div className="equation">
             <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
           </div>
-          <button>True</button>
-          <button>False</button>
+          <button onClick={this.checkAnswer}>True</button>
+          <button onClick={this.checkAnswer}>False</button>
           <p className="text">
             Your Score: {numCorrect}/{numQuestions}
           </p>
